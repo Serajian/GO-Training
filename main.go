@@ -134,6 +134,11 @@ func funcRunner(num int, scanner *bufio.Scanner) interface{} {
 		scanner.Scan()
 		input := scanner.Text()
 		result = trains.HowManyAppears(input)
+	case 6:
+		fmt.Print("✏️ Please enter a text: ")
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.FlipTheWords(input)
 	}
 
 	return result

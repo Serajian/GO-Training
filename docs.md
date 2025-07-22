@@ -3,8 +3,8 @@ String-Based Questions
 2. Is it a palindrome? Let's find out. ✅
 3. Remove duplicates from a string — efficiently. ✅
 4. First non-repeating character — who stands alone? ✅
-5. Count how many times each character appears.
-6. Flip the words in a sentence, not the letters.
+5. Count how many times each character appears. ✅
+6. Flip the words in a sentence, not the letters. ✅
 7. Are two strings anagrams? Prove it.
 8. Longest substring without repeats — sliding window style.
 9. Build your own atoi — string to integer.
