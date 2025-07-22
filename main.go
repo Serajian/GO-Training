@@ -162,11 +162,12 @@ func funcRunner(num int, scanner *bufio.Scanner) interface{} {
 		input := scanner.Text()
 		result = trains.MyAToI(input)
 
-		//case 10:
-		//	fmt.Print("✏️ Please enter a text: ")
-		//	scanner.Scan()
-		//	input := scanner.Text()
-		//	result = trains.FlipTheWords(input)
+	case 10:
+		fmt.Print("✏️ Please enter a text: ")
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.CompressLength(input)
+
 		//case 11:
 		//	fmt.Print("✏️ Please enter a text: ")
 		//	scanner.Scan()
