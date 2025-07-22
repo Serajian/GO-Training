@@ -150,11 +150,12 @@ func funcRunner(num int, scanner *bufio.Scanner) interface{} {
 		inputB := scanner.Text()
 		result = trains.IsAnagram(inputA, inputB)
 
-		//case 8:
-		//	fmt.Print("✏️ Please enter a text: ")
-		//	scanner.Scan()
-		//	input := scanner.Text()
-		//	result = trains.FlipTheWords(input)
+	case 8:
+		fmt.Print("✏️ Please enter a text: ")
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.LengthOfLongestSubstring(input)
+
 		//case 9:
 		//	fmt.Print("✏️ Please enter a text: ")
 		//	scanner.Scan()
