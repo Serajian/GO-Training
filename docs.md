@@ -7,7 +7,7 @@ String-Based Questions
 6. Flip the words in a sentence, not the letters. ✅
 7. Are two strings anagrams? Prove it. ✅
 8. Longest substring without repeats — sliding window style. ✅
-9. Build your own atoi — string to integer.
+9. Build your own atoi — string to integer. ✅
 10. Compress strings with run-length encoding.
 11. Most frequent character — who dominates?
 12. List all possible substrings of a string.
