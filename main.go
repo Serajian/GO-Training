@@ -134,11 +134,63 @@ func funcRunner(num int, scanner *bufio.Scanner) interface{} {
 		scanner.Scan()
 		input := scanner.Text()
 		result = trains.HowManyAppears(input)
+
 	case 6:
 		fmt.Print("✏️ Please enter a text: ")
 		scanner.Scan()
 		input := scanner.Text()
 		result = trains.FlipTheWords(input)
+
+	case 7:
+		fmt.Print("✏️ Please enter a first word: ")
+		scanner.Scan()
+		inputA := scanner.Text()
+		fmt.Print("✏️ Please enter a second word: ")
+		scanner.Scan()
+		inputB := scanner.Text()
+		result = trains.IsAnagram(inputA, inputB)
+
+		//case 8:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+		//case 9:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+		//case 10:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+		//case 11:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+		//case 12:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+		//case 13:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+		//case 14:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+		//case 15:
+		//	fmt.Print("✏️ Please enter a text: ")
+		//	scanner.Scan()
+		//	input := scanner.Text()
+		//	result = trains.FlipTheWords(input)
+
 	}
 
 	return result

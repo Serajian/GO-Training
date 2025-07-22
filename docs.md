@@ -5,7 +5,7 @@ String-Based Questions
 4. First non-repeating character — who stands alone? ✅
 5. Count how many times each character appears. ✅
 6. Flip the words in a sentence, not the letters. ✅
-7. Are two strings anagrams? Prove it.
+7. Are two strings anagrams? Prove it. ✅
 8. Longest substring without repeats — sliding window style.
 9. Build your own atoi — string to integer.
 10. Compress strings with run-length encoding.
