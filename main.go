@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"go-train/trains"
 	"os"
@@ -59,74 +60,80 @@ var exerciseDescriptions = map[int]string{
 	45: "Exercise 45: Product of all elements except self.",
 }
 
-func main(){
+func main() {
 	fmt.Println("Welcome to GO training exercises! 🧑‍💻")
-	for{
-	fmt.Print("🍻 Please enter the exercise number (1-45): ")
+	scanner := bufio.NewScanner(os.Stdin)
+	for {
+		fmt.Print("🍻 Please enter the exercise number (1-45): ")
 
-	var exerciseNum int
-	_, err := fmt.Scan(&exerciseNum)
-	if err != nil {
-		fmt.Println("🚨 Error reading input:", err)
-		os.Exit(1)
-	}
+		var exerciseNum int
+		_, err := fmt.Scan(&exerciseNum)
+		if err != nil {
+			fmt.Println("🚨 Error reading input:", err)
+			os.Exit(1)
+		}
 
-	// Validate exercise number
-	if _, exists := exerciseDescriptions[exerciseNum]; !exists {
-		fmt.Println("🚨 Invalid exercise number! Must be between 1 and 45. 🚨")
-		os.Exit(1)
-	}
+		// Validate exercise number
+		if _, exists := exerciseDescriptions[exerciseNum]; !exists {
+			fmt.Println("🚨 Invalid exercise number! Must be between 1 and 45. 🚨")
+			os.Exit(1)
+		}
 
-	// Display exercise description
-	fmt.Println("\n🔖 Exercise description:")
-	fmt.Println(exerciseDescriptions[exerciseNum])
+		// Display exercise description
+		fmt.Println("\n🔖 Exercise description:")
+		fmt.Println(exerciseDescriptions[exerciseNum])
 
+		result := funcRunner(exerciseNum, scanner)
 
-	result:= funcRunner(exerciseNum)
-	
-	// Print result
-	fmt.Println("\n✨ Exercise result:")
-	fmt.Println(result)
+		// Print result
+		fmt.Println("\n✨ Exercise result:")
+		fmt.Println(result)
 
-	// Ask if the user wants to continue
-	fmt.Print("\n♻️ If you want to continue write (y/yes): ")
-	var continueInput string
-	fmt.Scanln(&continueInput)
-	continueInput = strings.ToLower(strings.TrimSpace(continueInput))
-	if continueInput != "y" &&continueInput!="yes" {
-		fmt.Println("🚧  Exiting program. Goodbye! 🚧")
-		break 
-	}
-	fmt.Println("🚀 Let's GO...") 
+		// Ask if the user wants to continue
+		fmt.Print("\n♻️ If you want to continue write (y/yes): ")
+		var continueInput string
+		_, _ = fmt.Scanln(&continueInput)
+		continueInput = strings.ToLower(strings.TrimSpace(continueInput))
+		if continueInput != "y" && continueInput != "yes" {
+			fmt.Println("🚧  Exiting program. Goodbye! 🚧")
+			break
+		}
+		fmt.Println("🚀 Let's GO...")
 	}
 }
 
-func funcRunner(num int)interface{}{
+func funcRunner(num int, scanner *bufio.Scanner) interface{} {
 	var result interface{}
 	switch num {
 	case 1:
 		fmt.Print("✏️ Please enter a string: ")
-		var input string
-		fmt.Scanln(&input)
-		result = trains.ReverseString(input) 
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.ReverseString(input)
 
 	case 2:
 		fmt.Print("✏️ Please enter a string: ")
-		var input string
-		fmt.Scanln(&input)
-		result = trains.IsPalindrome(input) 
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.IsPalindrome(input)
 
 	case 3:
 		fmt.Print("✏️ Please enter text: ")
-		var input string
-		fmt.Scanln(&input)
-		result = trains.RemoveDuplicates(input) 
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.RemoveDuplicates(input)
 
 	case 4:
 		fmt.Print("✏️ Please enter a string: ")
-		var input string
-		fmt.Scanln(&input)
-		result = trains.FirstNoneRepeating(input) 
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.FirstNoneRepeating(input)
+
+	case 5:
+		fmt.Print("✏️ Please enter a string: ")
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.HowManyAppears(input)
 	}
 
 	return result
