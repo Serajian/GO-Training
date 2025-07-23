@@ -9,7 +9,7 @@ String-Based Questions
 8. Longest substring without repeats — sliding window style. ✅
 9. Build your own atoi — string to integer. ✅
 10. Compress strings with run-length encoding. ✅
-11. Most frequent character — who dominates? 
+11. Most frequent character — who dominates? ✅
 12. List all possible substrings of a string.
 13. Is one string a rotation of another?
 14. Strip all white spaces from a string.
