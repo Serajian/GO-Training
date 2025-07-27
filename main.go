@@ -174,11 +174,12 @@ func funcRunner(num int, scanner *bufio.Scanner) interface{} {
 		input := scanner.Text()
 		result = trains.MostFrequentCharacter(input)
 
-		//case 12:
-		//	fmt.Print("✏️ Please enter a text: ")
-		//	scanner.Scan()
-		//	input := scanner.Text()
-		//	result = trains.FlipTheWords(input)
+	case 12:
+		fmt.Print("✏️ Please enter a text: ")
+		scanner.Scan()
+		input := scanner.Text()
+		result = trains.MakeSubstrings(input)
+
 		//case 13:
 		//	fmt.Print("✏️ Please enter a text: ")
 		//	scanner.Scan()
