@@ -1,32 +1,46 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# فایل‌های اجرایی و پلاگین‌ها
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# فایل‌های باینری تست (حاصل از `go test -c`)
 *.test
 
-# Code coverage profiles and other test artifacts
+# گزارش‌های پوشش کد (Code Coverage)
 *.out
+*.cover
 coverage.*
 *.coverprofile
 profile.cov
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# پوشه‌های وابستگی (Dependencies)
+vendor/
+go/pkg/
 
-# Go workspace file
+# فایل‌های workspace گو
 go.work
 go.work.sum
 
-# env file
+# فایل‌های محیطی (Environment)
 .env
+.env.local
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# فایل‌های IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# فایل‌های تولید شده توسط کامپایلر
+/bin/
+/dist/
+
+# لاگ‌ها و فایل‌های موقت
+*.log
+*.tmp
+
+# ماژول‌های گو (در صورت نیاز می‌توانید این را حذف کنید)
+# go.mod
+# go.sum

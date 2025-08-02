@@ -180,11 +180,15 @@ func funcRunner(num int, scanner *bufio.Scanner) interface{} {
 		input := scanner.Text()
 		result = trains.MakeSubstrings(input)
 
-		//case 13:
-		//	fmt.Print("✏️ Please enter a text: ")
-		//	scanner.Scan()
-		//	input := scanner.Text()
-		//	result = trains.FlipTheWords(input)
+	case 13:
+		fmt.Print("✏️ Please enter a first string: ")
+		scanner.Scan()
+		inputA := scanner.Text()
+		fmt.Print("✏️ Please enter a second string: ")
+		scanner.Scan()
+		inputB := scanner.Text()
+		result = trains.IsRotation(inputA, inputB)
+
 		//case 14:
 		//	fmt.Print("✏️ Please enter a text: ")
 		//	scanner.Scan()
